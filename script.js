@@ -83,6 +83,18 @@ document.addEventListener('keydown', function (event) {
         }
     }
 
+    if(event.key === "ArrowRight" || event.key === "ArrowDown"){
+        if(currentIndex != -1){
+            currentIndex++;
+            createCanvas();
+            wordlistelement.getElementsByTagName("*")[currentIndex].scrollIntoView();
+            highlightElement(currentIndex);
+        }
+
+        else{
+        }
+    }
+
 })
 
 // parameter should be a number
