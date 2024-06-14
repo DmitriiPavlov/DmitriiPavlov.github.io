@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="position.css"> 
+</head>
+<body onresize='createCanvas();'>
+    <canvas id="myCanvas" ></canvas>
+<div id="container">
+    <p id="websitetitle">Word Hunt Bot</p>
+    <div id="grid"></div>
+    <div id="stats">
+    </div>
+    <ul id="wordlist"></ul>
+    <div id="buttonhouse">
+        <div>
+        <button type="button" id="clear" onclick = "clearGrid()">Clear</button>
+        <button onmousedown="event.preventDefault();" type="button" id="solve" onclick = "generateAll()">Solve</button>
+        </div>
+        <div id="sizeselector">
+            <button type="button" class="toggle" id="4x4" onclick="updateGrid(4); toggleSwitch('4x4');" t>4x4</button>
+            <button type="button" class="toggle" id="5x5" onclick="updateGrid(5); toggleSwitch('5x5');">5x5</button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>

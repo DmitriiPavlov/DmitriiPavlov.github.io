@@ -1,0 +1,39 @@
+#container {
+    --grid-dimensions: 4;
+    display:grid;
+    grid-template-rows: 0.5fr max(8fr,70vh) 0.5fr;
+    grid-template-columns: 1fr 70vh 1fr;
+    height:100%;
+    gap:10px;
+  }
+  
+#container p{
+    grid-column: 1/4;
+    justify-self: center;
+}
+
+#grid{
+    display:grid;
+    grid-column:2/3;
+    aspect-ratio: 1/1;
+    grid-template:repeat(var(--grid-dimensions),1fr) / repeat(var(--grid-dimensions),1fr);
+}
+
+#wordlist{
+    grid-column: 3/4;
+}
+
+#buttonhouse{
+    grid-column:2/3;
+    display:flex;
+    justify-content: space-between;
+}
+
+#stats{
+    grid-column:1/2;
+    grid-row:2/3;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:0.5em;
+}
